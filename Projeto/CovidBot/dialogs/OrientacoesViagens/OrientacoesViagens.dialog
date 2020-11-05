@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "dccqXs",
+    "name": "OrientacoesViagens",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "jQB9Fu"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "G3zbl0"
+          },
+          "activity": "${SendActivity_G3zbl0()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Hu7b6A"
+          },
+          "activity": "${SendActivity_Hu7b6A()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "WPI7qq",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "fwHHxZ"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    }
+  ],
+  "generator": "OrientacoesViagens.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      }
+    ]
+  },
+  "id": "OrientacoesViagens"
+}

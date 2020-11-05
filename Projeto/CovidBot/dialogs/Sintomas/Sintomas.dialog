@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "iHxOav",
+    "name": "Sintomas",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "2Cg06r"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "LIO7bn"
+          },
+          "activity": "${SendActivity_LIO7bn()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "vsxQKG"
+          },
+          "activity": "${SendActivity_vsxQKG()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "KfpD9D",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "4wBVa0"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    }
+  ],
+  "generator": "Sintomas.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      }
+    ]
+  },
+  "id": "Sintomas"
+}

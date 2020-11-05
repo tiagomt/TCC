@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "JAFsta",
+    "name": "NumerosAtualizados",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ef3DnQ"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "L5hybD"
+          },
+          "activity": "${SendActivity_L5hybD()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ghFSCi"
+          },
+          "activity": "${SendActivity_ghFSCi()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "4EvL9u",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "b4RnUq"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    }
+  ],
+  "generator": "NumerosAtualizados.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      }
+    ]
+  },
+  "id": "NumerosAtualizados"
+}

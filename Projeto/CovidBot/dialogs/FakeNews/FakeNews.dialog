@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "HIc3dI",
+    "name": "FakeNews",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "WRVQNN"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "U8wYhC"
+          },
+          "activity": "${SendActivity_U8wYhC()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "nb1Bou"
+          },
+          "activity": "${SendActivity_nb1Bou()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "dWK1k3",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "8z3GAN"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    }
+  ],
+  "generator": "FakeNews.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      }
+    ]
+  },
+  "id": "FakeNews"
+}
