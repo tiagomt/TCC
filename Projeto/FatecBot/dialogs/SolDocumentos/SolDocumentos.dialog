@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "k78ZVI",
+    "name": "SolDocumentos",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "IVGfH3"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "O9VVwR"
+          },
+          "activity": "${SendActivity_O9VVwR()}"
+        }
+      ]
+    }
+  ],
+  "generator": "SolDocumentos.lg",
+  "recognizer": "SolDocumentos.lu.qna",
+  "id": "SolDocumentos"
+}

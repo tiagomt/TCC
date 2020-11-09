@@ -1,0 +1,12 @@
+# WelcomeUser
+- ${ParteDia()}
+
+
+#ParteDia()
+-SWITCH: ${getTimeOfDay(subtractFromTime(utcNow() ,3 ,'Hour')) }
+- CASE: ${ "morning" }
+    - Bom dia!
+- CASE: ${ "afternoon" }
+    - Boa tarde!
+- CASE: ${ "evening" }
+    - Boa noite!

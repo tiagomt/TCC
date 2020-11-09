@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "fKSc2p",
+    "name": "Calendario",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "EVSoy7"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "nR1XUH"
+          },
+          "activity": "${SendActivity_nR1XUH()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Calendario.lg",
+  "recognizer": "Calendario.lu.qna",
+  "id": "Calendario"
+}

@@ -1,0 +1,10 @@
+[import](common.lg)
+
+# SendActivity_P6tgtx()
+- ```Selecione uma das opções abaixo:
+1 - Calendário escolar
+2 - Solicitação de documentos
+3 - Secretaria
+4 - Estágio```
+# ChoiceInput_Prompt_BZceUv()
+- Que tu quer?
