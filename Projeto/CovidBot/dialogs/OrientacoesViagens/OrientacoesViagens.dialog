@@ -24,6 +24,45 @@
           "activity": "${SendActivity_G3zbl0()}"
         },
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "rtMBFe"
+          },
+          "property": "dialog.recomendation",
+          "value": [
+            "🧼 Lave as mãos com frequência.",
+            "👄 Evite tocar os olhos, a boca e o nariz.",
+            "💪 Cubra a boca e o nariz com o antebraço ou com um lenço de papel ao tossir ou espirrar.",
+            "↔️ Mantenha mais de 1 metro de distância de pessoas que estão doentes.",
+            "🍗 Siga práticas adequadas de higienização de alimentos."
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "Rf5UBc"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "dialog.recomendation",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "tN3xLy"
+              },
+              "activity": "${SendActivity_tN3xLy()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Iv0gSr"
+          },
+          "activity": "${SendActivity_Iv0gSr()}"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "Hu7b6A"

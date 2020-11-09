@@ -10,3 +10,5 @@
     - Boa tarde!
 - CASE: ${ "evening" }
     - Boa noite!
+- DEFAULT:
+    -

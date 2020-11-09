@@ -26,6 +26,13 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
+            "id": "8palUd"
+          },
+          "activity": "${SendActivity_8palUd()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
             "id": "vsxQKG"
           },
           "activity": "${SendActivity_vsxQKG()}"

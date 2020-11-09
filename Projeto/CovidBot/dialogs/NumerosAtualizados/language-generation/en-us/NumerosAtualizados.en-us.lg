@@ -1,7 +1,51 @@
 [import](common.lg)
 
-# SendActivity_L5hybD()
-- Números atualizados
 # SendActivity_ghFSCi()
 - 0 - Menu inicial
 
+
+# ChoiceInput_Prompt_OM5t6f()
+- Numeros atualizados
+# SendActivity_5aDcsm()
+- Por país
+# SendActivity_NSHDxz()
+- ```Total de casos: ${formatNumber(
+dialog.resposta.content.total, 0, 'pt-br')}
+Ativos: ${formatNumber(dialog.resposta.content.activeCases.total, 0, 'pt-br')}
+Recuperados: ${formatNumber(
+dialog.resposta.content.closedCases.recovered, 0, 'pt-br')}
+Mortos: ${formatNumber(dialog.resposta.content.closedCases.deaths, 0, 'pt-br')}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# SendActivity_UKYC9E()
+- Procurando dados
+
+# SendActivity_0QEVvI()
+[Activity
+    Type = typing
+]
+
+
+# SendActivity_XH37Cb()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]

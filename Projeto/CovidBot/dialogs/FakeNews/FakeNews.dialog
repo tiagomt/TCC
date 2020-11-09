@@ -24,6 +24,43 @@
           "activity": "${SendActivity_U8wYhC()}"
         },
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "QXmkX1"
+          },
+          "property": "dialog.respostas",
+          "value": [
+            "😷 O uso prolongado de máscaras médicas, quando feito corretamente, NÃO causa intoxicação por CO2 ou insuficiência de oxigênio.",
+            "🍷 Beber álcool NÃO protege você contra a COVID-19 e pode ser perigoso",
+            "🤳 Redes móveis 5G NÃO espalham a COVID-19.",
+            "😳 Segurar a respiração por 10 segundos ou mais sem tossir ou sentir desconforto NÃO significa que você está livre da COVID-19 ou de outra doença pulmonar.",
+            "🧴 Beber metanol, etanol ou água sanitária NÃO previne ou cura a COVID-19 e pode ser extremamente perigoso.",
+            "💦 Usar álcool, cloro, água sanitária ou outro desinfetante no seu corpo ou ingeri-los NÃO protegerá você contra a COVID-19 e pode ser perigoso. O uso dessas substâncias pode danificar roupas e prejudicar membranas mucosas (por exemplo, os olhos e a boca). O álcool e o cloro podem ser úteis para desinfetar as superfícies, mas precisam ser usados de acordo com as recomendações de cada produto.",
+            "💉 As vacinas contra pneumonia, como a vacina pneumocócica e a vacina contra Haemophilus influenzae tipo b (Hib), NÃO oferecem proteção contra o novo coronavírus.",
+            "💊 Antibióticos NÃO agem contra os vírus e são eficazes somente contra bactérias.",
+            "🧪 Até o momento, NÃO existe nenhum medicamento específico e recomendado na prevenção e no tratamento da doença causada pelo novo coronavírus.",
+            "🙂 Você pode se recuperar da COVID-19. A contaminação pela COVID-19 NÃO significa que você terá a doença para sempre."
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "LcAkiw"
+          },
+          "value": "dialog.foreach.value",
+          "itemsProperty": "dialog.respostas",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "s1gXAx"
+              },
+              "activity": "${SendActivity_s1gXAx()}"
+            }
+          ],
+          "index": "dialog.foreach.index"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "nb1Bou"

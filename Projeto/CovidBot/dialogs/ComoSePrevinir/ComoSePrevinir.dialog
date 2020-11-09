@@ -24,6 +24,40 @@
           "activity": "${SendActivity_YVsS5l()}"
         },
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "JLKeFq"
+          },
+          "property": "dialog.previnir",
+          "value": [
+            "🧼 Lave as mãos com frequência.",
+            "👄 Evite tocar os olhos, a boca e o nariz.",
+            "💪 Cubra a boca e o nariz com o antebraço ou com um lenço de papel ao tossir ou espirrar.",
+            "🚷 Evite aglomerações.",
+            "🏠 Se você não estiver se sentindo bem, fique em casa, inclusive se estiver com febre baixa e tosse leve.",
+            "🤒 Se você está com febre, tosse e dificuldade para respirar, procure atendimento médico imediatamente, mas entre em contato por telefone antes.",
+            "ℹ️ Fique atento às informações mais recentes da OMS."
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "BYsqfY"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "dialog.previnir",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "wUoCc8"
+              },
+              "activity": "${SendActivity_wUoCc8()}"
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "HE7Qqq"

@@ -17,11 +17,94 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "L5hybD"
+            "id": "OM5t6f"
           },
-          "activity": "${SendActivity_L5hybD()}"
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_OM5t6f()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            {
+              "value": "Global"
+            },
+            {
+              "synonyms": [
+                ""
+              ],
+              "value": "Por país"
+            }
+          ],
+          "property": "dialog.opcao"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "J36BwZ"
+          },
+          "condition": "dialog.opcao",
+          "cases": [
+            {
+              "value": "Global",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "0QEVvI"
+                  },
+                  "activity": "${SendActivity_0QEVvI()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "XH37Cb"
+                  },
+                  "activity": "${SendActivity_XH37Cb()}"
+                },
+                {
+                  "$kind": "Microsoft.HttpRequest",
+                  "$designer": {
+                    "id": "NZJcPk"
+                  },
+                  "method": "GET",
+                  "url": "https://covid19-update-api.herokuapp.com/api/v1/cases",
+                  "resultProperty": "dialog.resposta"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "NSHDxz"
+                  },
+                  "activity": "${SendActivity_NSHDxz()}"
+                }
+              ]
+            },
+            {
+              "value": "Por país",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "5aDcsm"
+                  },
+                  "activity": "${SendActivity_5aDcsm()}"
+                }
+              ]
+            }
+          ]
         },
         {
           "$kind": "Microsoft.SendActivity",

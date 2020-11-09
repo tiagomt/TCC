@@ -1,6 +1,10 @@
 [import](common.lg)
 
 # SendActivity_U8wYhC()
-- Fake News
+-```Verificação de fatos da OMS
+
+Existem muitas informações falsas circulando. Estes são os fatos:```
 # SendActivity_nb1Bou()
 - 0 - Menu Inicial
+# SendActivity_s1gXAx()
+- ${dialog.foreach.value}
