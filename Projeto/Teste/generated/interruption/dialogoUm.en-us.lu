@@ -1,0 +1,538 @@
+
+> LUIS application information
+> !# @app.name = ListarPaises
+> !# @app.versionId = 7.8
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 7.0.0
+> !# @app.tokenizerVersion = 1.0.0
+
+
+> # Intent definitions
+
+# BuscarPaises
+- bielorrúsia
+- brasil
+- dados sobre o brasil
+- eu escolho o brasil
+- sao pedro e miquelao
+- uzbequistao
+- uzbequistão
+- vanuatu
+- vietna
+- vietnã
+- zimbábue
+- zimbabwe
+
+
+@ intent BuscarPaises usesFeature Paises
+
+# None
+
+
+> # Entity definitions
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+@ list Paises = 
+	- Zambia :
+		- Zâmbia
+	- Yemen :
+		- Iêmen
+		- Iemen
+	- Western Sahara :
+		- Saara Ocidental
+	- Wallis and Futuna :
+		- Wallis e Futuna
+	- Vietnam :
+		- Vietnã
+		- Vietna
+	- Venezuela :
+	- Vanuatu :
+	- Uzbekistan :
+		- Uzbequistão
+		- Uzbequistao
+	- Uruguay :
+		- Uruguai
+	- Ukraine :
+		- Ucrania
+	- Uganda :
+	- USA :
+		- EUA
+		- United States
+		- Estados Unidos
+	- UK :
+		- Reino Unido
+		- United Kingdom
+	- UAE :
+		- Emirados Árabes Unidos
+		- Emirates of the United Arab
+	- Turks and Caicos Islands :
+		- Ilhas Turcas e Caicos
+		- Ilhas Turcas
+	- Turkey :
+		- turquia
+		- turkia
+	- Tunisia :
+		- tunísia
+	- Trinidad and Tobago :
+		- Trindade e Tobago
+	- Togo :
+	- Timor-Leste :
+	- Thailand :
+		- tailandia
+		- tailândia
+	- Tanzania :
+		- tanzânia
+	- Tajikistan :
+		- Tajiquistão
+		- Tajiquistao
+	- Taiwan :
+		- taiuan
+	- Syrian Arab Republic :
+		- Síria
+	- Switzerland :
+		- Suíça
+		- Suiça
+	- Sweden :
+		- Suécia
+		- suecia
+	- Swaziland :
+		- Suazilândia
+		- Suazilandia
+	- Suriname :
+	- Sudan :
+		- Sudão
+		- Sudao
+	- St. Barth :
+		- São Bartolomeu
+		- Sao Bartolomeu
+	- Sri Lanka :
+	- Spain :
+		- Espanha
+	- Zimbabwe :
+		- Zimbábue
+		- Zimbabue
+	- South Sudan :
+		- Sudão do Sul
+		- Sudao do Sul
+	- South Africa :
+		- África do Sul
+		- Africa do Sul
+	- Somalia :
+		- Somália
+	- Solomon Islands :
+		- Ilhas Salomão
+		- Ilhas Salomao
+	- Slovenia :
+		- Eslovênia
+		- Eslovenia
+	- Slovakia :
+		- Eslováquia
+		- Eslovaquia
+	- Sint Maarten :
+		- São Martinho
+	- Singapore :
+		- Singapura
+		- Cingapura
+	- Sierra Leone :
+		- Serra Leoa
+	- Seychelles :
+		- Seicheles
+	- Serbia :
+		- Sérvia
+		- Servia
+	- Senegal :
+	- Saudi Arabia :
+		- Arábia Saudita
+	- Sao Tome and Principe :
+		- São Tomé e Príncipe
+		- Sao Tome e Principe
+	- San Marino :
+		- São Marino
+		- são marinho
+	- Saint Vincent and the Grenadines :
+		- São Vicente e Granadinas
+		- sao vicente e granadinas
+	- Saint Pierre Miquelon :
+		- Saint-Pierre e Miquelon
+		- São Pedro e Miquelão
+		- sao pierre e miquelao
+		- sao pedro e miquelao
+	- Saint Martin :
+		- Ilha de São Martinho
+		- Ilha de Sao Martinho
+	- Saint Lucia :
+		- Santa Lúcia
+		- Santa Lucia
+	- Saint Kitts and Nevis :
+		- São Cristóvão e Névis
+		- São Cristóvao e Nevis
+		- São Cristovao e Nevis
+	- S. Korea :
+		- Coreia do Sul
+		- Coréia do Sul
+		- South Korea
+	- Réunion :
+		- Ilha da Reunião
+		- Ilha da Reuniao
+	- Rwanda :
+		- Ruanda
+	- Russia :
+		- Rússia
+	- Romania :
+		- Romênia
+		- Romenia
+	- Qatar :
+		- Catar
+	- Portugal :
+	- Poland :
+		- Polonia
+		- Polônia
+	- Philippines :
+		- Filipinas
+	- Peru :
+	- Paraguay :
+		- Paraguai
+	- Papua New Guinea :
+		- Papua-Nova Guiné
+		- Nova Guine
+		- Nova Guiné
+		- Papua-Nova Guine
+	- Panama :
+		- Panamá
+	- Palestine :
+		- Palestina
+	- Pakistan :
+		- Paquistão
+		- Paquistao
+	- Oman :
+		- Omã
+		- Oma
+	- Norway :
+		- Noruega
+	- Nigeria :
+		- Nigéria
+	- Niger :
+		- Níger
+	- Nicaragua :
+		- Nicarágua
+	- New Zealand :
+		- Nova Zelandia
+		- Nova Zelândia
+	- New Caledonia :
+		- Nova Caledônia
+		- Nova Caledonia
+	- Netherlands :
+		- Países Baixos
+		- Holanda
+		- Paises Baixos
+	- Namibia :
+		- Namíbia
+	- Myanmar :
+		- Mianmar
+	- Mozambique :
+		- Moçambique
+	- Morocco :
+		- Marrocos
+	- Montserrat :
+		- Monserrate
+	- Montenegro :
+	- Mongolia :
+		- Mongólia
+	- Monaco :
+		- Mônaco
+	- Moldova :
+		- Moldávia
+		- Moldavia
+	- Mexico :
+		- México
+	- Mayotte :
+		- Ilhas Maurício
+		- Ilhas Mauricio
+	- Mauritania :
+		- Mauritânia
+	- Martinique :
+	- Marshall Islands :
+		- Ilhas Marshall
+	- Malta :
+	- Mali :
+	- Maldives :
+		- Maldivas
+	- Malaysia :
+		- Malásia
+		- Malasia
+	- Malawi :
+	- Madagascar :
+	- Macedonia :
+		- Macedônia
+	- Macao :
+		- Macau
+	- MS Zaandam :
+	- Luxembourg :
+		- Luxemburgo
+	- Lithuania :
+		- Lituânia
+		- Lituania
+	- Liechtenstein :
+	- Libyan Arab Jamahiriya :
+		- Líbia
+		- Libia
+	- Liberia :
+		- Libéria
+	- Lesotho :
+		- Lesoto
+	- Lebanon :
+		- Líbano
+		- Libano
+	- Latvia :
+		- Letônia
+		- Letonia
+	- Lao People's Democratic Republic :
+		- Laos
+		- República Democrática Popular do Laos
+		- Republica Democratica Popular do Laos
+	- Kyrgyzstan :
+		- Quirguistão
+		- Quirguistao
+	- Kuwait :
+	- Kenya :
+		- Quênia
+		- Quenia
+	- Kazakhstan :
+		- Cazaquistão
+		- Cazaquistao
+	- Jordan :
+		- Jordânia
+		- Jordania
+	- Japan :
+		- Japão
+		- Japao
+	- Jamaica :
+	- Italy :
+		- Itália
+		- Italia
+	- Israel :
+	- Isle of Man :
+		- Ilha de Man
+	- Ireland :
+		- Irlanda
+	- Iraq :
+		- Iraque
+	- Iran :
+		- Irã
+	- Indonesia :
+		- Indonésia
+	- India :
+		- Índia
+	- Iceland :
+		- Islândia
+		- Islandia
+	- Hungary :
+		- Hungria
+	- Hong Kong :
+		- HK
+	- Honduras :
+	- Holy See (Vatican City State) :
+		- Vaticano
+		- Vatican City
+		- Holy See
+	- Haiti :
+	- Guyana :
+		- Guiana
+	- Guinea-Bissau :
+		- Guiné-Bissau
+	- Guinea :
+		- Guiné
+		- República da Guiné
+		- Republica da Guine
+	- Guatemala :
+	- Guadeloupe :
+		- Guadalupe
+	- Grenada :
+		- Granada
+	- Greenland :
+		- Groenlândia
+		- Groenlandia
+	- Greece :
+		- Grécia
+		- Grecia
+	- Gibraltar :
+	- Ghana :
+		- Gana
+	- Germany :
+		- Alemanha
+	- Georgia :
+		- Geórgia
+	- Gambia :
+		- Gâmbia
+	- Gabon :
+		- Gabão
+		- Gabao
+	- French Polynesia :
+		- Polinésia Francesa
+		- Polinesia Francesa
+	- French Guiana :
+		- Guiana Francesa
+	- France :
+		- França
+	- Finland :
+		- Finlândia
+		- Finlandia
+	- Fiji :
+		- Ilhas Fiji
+	- Faroe Islands :
+		- Ilhas Faroé
+		- Ilhas Faroe
+	- Falkland Islands (Malvinas) :
+		- Ilhas Falkland
+		- Ilhas Malvinas
+		- Malvinas
+	- Ethiopia :
+		- Etiópia
+		- Etiopia
+	- Estonia :
+		- Estônia
+	- Eritrea :
+		- Eritreia
+	- Equatorial Guinea :
+		- Guiné Equatorial
+		- Guine Equatorial
+	- El Salvador :
+		- ElSalvador
+	- Egypt :
+		- Egito
+	- Ecuador :
+		- Equador
+	- Dominican Republic :
+		- República Dominicana
+		- Republica Dominicana
+	- Dominica :
+	- Djibouti :
+	- Diamond Princess :
+	- Denmark :
+		- Dinamarca
+	- DRC :
+		- Democratic Republic of the Congo
+		- República Democrática do Congo
+		- Republica Democratica do Congo
+	- Côte d'Ivoire :
+		- Ivory Coast
+		- Costa do Marfim
+	- Czechia :
+		- Czech Republic
+		- Tchéquia
+		- República Tcheca
+		- Republica Tcheca
+	- Cyprus :
+		- Chipre
+	- Curaçao :
+	- Cuba :
+	- Croatia :
+		- Croácia
+		- Croacia
+	- Costa Rica :
+	- Congo :
+	- Comoros :
+		- Comores
+	- Colombia :
+		- Colômbia
+	- China :
+	- Chile :
+	- Channel Islands :
+		- Ilhas do Canal
+	- Chad :
+		- Chade
+	- Central African Republic :
+		- República Centro-Africana
+		- Republica Centro-Africana
+		- Republica Centro Africana
+	- Cayman Islands :
+		- Ilhas Cayman
+	- Caribbean Netherlands :
+		- Países Baixos Caribenhos
+		- Caribe Holandês
+	- Canada :
+		- Canadá
+	- Cameroon :
+		- Camarões
+		- Camaroes
+	- Cambodia :
+		- Cambodja
+	- Cabo Verde :
+	- Burundi :
+	- Burkina Faso :
+		- Burquina Faso
+	- Bulgaria :
+		- Bulgária
+	- Brunei :
+	- British Virgin Islands :
+		- Ilhas Virgens Britânicas
+		- Ilhas Virgens Britanicas
+	- Brazil :
+		- Brasil
+	- Botswana :
+		- Botsuana
+	- Bosnia :
+		- Bósnia e Herzegovina
+		- Bosnia e Herzegovina
+		- Bósnia
+	- Bolivia :
+		- Bolívia
+	- Bhutan :
+		- Butão
+		- Butao
+	- Bermuda :
+		- Bermudas
+	- Benin :
+	- Belize :
+	- Belgium :
+		- Bélgica
+		- Belgica
+	- Barbados :
+	- Bangladesh :
+	- Bahrain :
+		- Bahrein
+	- Bahamas :
+	- Azerbaijan :
+		- Azerbaijão
+		- Azerbaijao
+	- Austria :
+		- Áustria
+	- Australia :
+		- Austrália
+	- Aruba :
+	- Armenia :
+		- Armênia
+	- Argentina :
+	- Antigua and Barbuda :
+		- Antígua e Barbuda
+		- Antigua e Barbuda
+	- Anguilla :
+	- Angola :
+	- Andorra :
+	- Algeria :
+		- Argelia
+		- Argélia
+	- Albania :
+		- Albânia
+	- Afghanistan :
+		- Afeganistão
+		- Afeganistao
+	- Belarus :
+		- Bielorrússia
+		- Bielorrussia
+		- Bielorussia
+		- Bielorússia
+		- Bielorrusia
+
+
+> # RegEx entities
+
+

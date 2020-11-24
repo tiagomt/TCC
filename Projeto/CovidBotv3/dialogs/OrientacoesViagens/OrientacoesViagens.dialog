@@ -1,0 +1,113 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "dccqXs",
+    "name": "OrientacoesViagens",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "jQB9Fu"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "G3zbl0"
+          },
+          "activity": "${SendActivity_G3zbl0()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "rtMBFe"
+          },
+          "property": "dialog.recomendation",
+          "value": [
+            "🧼 Lave as mãos com frequência.",
+            "👄 Evite tocar os olhos, a boca e o nariz.",
+            "💪 Cubra a boca e o nariz com o antebraço ou com um lenço de papel ao tossir ou espirrar.",
+            "↔️ Mantenha mais de 1 metro de distância de pessoas que estão doentes.",
+            "🍗 Siga práticas adequadas de higienização de alimentos.",
+            "🌡 Monitorar os sintomas por 14 dias e seguir os protocolos nacionais dos países de chegada. Alguns países podem solicitar que os viajantes entrem em quarentena.",
+            "🤒 Se apresentarem sintomas, como febre, tosse ou dificuldade para respirar, os viajantes devem entrar em contato com os profissionais de saúde locais, preferencialmente por telefone, e informar sobre o histórico de viagem e os sintomas."
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "Rf5UBc"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "dialog.recomendation",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "ngZAFY"
+              },
+              "activity": "${SendActivity_ngZAFY()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "9yOz7T"
+              },
+              "activity": "${SendActivity_9yOz7T()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "tN3xLy"
+              },
+              "activity": "${SendActivity_tN3xLy()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Hu7b6A"
+          },
+          "activity": "${SendActivity_Hu7b6A()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "WPI7qq",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "fwHHxZ"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    }
+  ],
+  "generator": "OrientacoesViagens.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      }
+    ]
+  },
+  "id": "OrientacoesViagens"
+}

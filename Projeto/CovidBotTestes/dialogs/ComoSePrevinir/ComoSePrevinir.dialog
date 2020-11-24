@@ -1,0 +1,129 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8T0SRu",
+    "name": "ComoSePrevinir",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "CI73G7"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "YVsS5l"
+          },
+          "activity": "${SendActivity_YVsS5l()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "v7K17y"
+          },
+          "assignments": [
+            {
+              "property": "dialog.previnir",
+              "value": [
+                "Lave as mãos com frequência.",
+                "Evite tocar os olhos, a boca e o nariz.",
+                "Cubra a boca e o nariz com o antebraço ou com um lenço de papel ao tossir ou espirrar.",
+                "Evite aglomerações.",
+                "Se você não estiver se sentindo bem, fique em casa, inclusive se estiver com febre baixa e tosse leve.",
+                "Se você está com febre, tosse e dificuldade para respirar, procure atendimento médico imediatamente, mas entre em contato por telefone antes.",
+                "Fique atento às informações mais recentes da OMS."
+              ]
+            },
+            {
+              "property": "dialog.imagens",
+              "value": [
+                "https://i.imgur.com/JankL4v.png",
+                "https://i.imgur.com/BZKB2Ru.png",
+                "https://i.imgur.com/v1RbJs3.png",
+                "https://i.imgur.com/3Pn02iY.png",
+                "https://i.imgur.com/R17r9Hy.png",
+                "https://i.imgur.com/HcRjPND.png",
+                "https://img.icons8.com/ios/452/info.png"
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "BYsqfY"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "dialog.previnir",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "ws6wJW"
+              },
+              "activity": "${SendActivity_ws6wJW()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "V65FJs"
+              },
+              "activity": "${SendActivity_V65FJs()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "LlJydw"
+              },
+              "activity": "${SendActivity_LlJydw()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "HE7Qqq"
+          },
+          "activity": "${SendActivity_HE7Qqq()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "hAjKTR",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "i1EVxA"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    }
+  ],
+  "generator": "ComoSePrevinir.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      }
+    ]
+  },
+  "id": "ComoSePrevinir"
+}

@@ -1,0 +1,221 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "CovidBo5",
+      "description": "",
+      "id": "jzLAYP"
+    }
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "859266",
+                    "name": "Send a response"
+                  },
+                  "activity": "${SendActivity_Welcome()}"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "9GOG4Q"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "MenuInicial"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "sQOFZg",
+        "name": "NoticiasTrigger"
+      },
+      "intent": "NoticiasTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "XPfOy5"
+          },
+          "activityProcessed": true,
+          "dialog": "Noticias"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "EdoSdD",
+        "name": "FakeNewsTrigger"
+      },
+      "intent": "FakeNewsTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "G9guNk"
+          },
+          "activityProcessed": true,
+          "dialog": "FakeNews"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "LHCCxY",
+        "name": "SintomasTrigger"
+      },
+      "intent": "SintomasTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "bgmZHQ"
+          },
+          "activityProcessed": true,
+          "dialog": "Sintomas"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "urSTnf",
+        "name": "ComoSePrevinirTrigger"
+      },
+      "intent": "ComoSePrevinirTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "GTqNrT"
+          },
+          "activityProcessed": true,
+          "dialog": "ComoSePrevinir"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "Cpjb5n",
+        "name": "OrientacoesViagensTrigger"
+      },
+      "intent": "OrientacoesViagensTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "r6gi7k"
+          },
+          "activityProcessed": true,
+          "dialog": "OrientacoesViagens"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "F0K59o",
+        "name": "PerguntasERespostasTrigger"
+      },
+      "intent": "PerguntasERespostasTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "rDm0Wh"
+          },
+          "activityProcessed": true,
+          "dialog": "PerguntasERespostas"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "KS9ETv",
+        "name": "NumerosAtualizadosTrigger"
+      },
+      "intent": "NumerosAtualizadosTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "fIsLbS"
+          },
+          "activityProcessed": true,
+          "dialog": "NumerosAtualizados"
+        }
+      ],
+      "priority": 0
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "covidbo5.lg",
+  "id": "CovidBo5",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "NumerosAtualizadosTrigger",
+        "pattern": "1|Numeros|Numeros atualizados"
+      },
+      {
+        "intent": "NoticiasTrigger",
+        "pattern": "2|Noticias|Notícias"
+      },
+      {
+        "intent": "FakeNewsTrigger",
+        "pattern": "3|Fake News|Fake"
+      },
+      {
+        "intent": "SintomasTrigger",
+        "pattern": "4|Sintomas"
+      },
+      {
+        "intent": "ComoSePrevinirTrigger",
+        "pattern": "5|Como se previnir"
+      },
+      {
+        "intent": "OrientacoesViagensTrigger",
+        "pattern": "6|Orientações para viagens"
+      },
+      {
+        "intent": "PerguntasERespostasTrigger",
+        "pattern": "7|Perguntas|Perguntas e respostas"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "aqt7oY",
+    "name": "dialogoUm",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "5bGjYG"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "yZJxt5"
+          },
+          "activity": "${SendActivity_yZJxt5()}"
+        }
+      ]
+    }
+  ],
+  "generator": "dialogoUm.lg",
+  "recognizer": "dialogoUm.lu.qna",
+  "id": "dialogoUm"
+}

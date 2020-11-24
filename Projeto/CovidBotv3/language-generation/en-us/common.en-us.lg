@@ -1,0 +1,280 @@
+# WelcomeUser
+- ${ParteDia()}
+
+
+#ParteDia()
+-SWITCH: ${getTimeOfDay(subtractFromTime(utcNow() ,3 ,'Hour')) }
+- CASE: ${ "morning" }
+    - Bom dia!
+- CASE: ${ "afternoon" }
+    - Boa tarde!
+- CASE: ${ "evening" }
+    - Boa noite!
+- DEFAULT:
+    -
+
+#ValidaDados(numero)
+-IF: ${ numero == 0 }
+    - Ainda não divulgados
+- ELSE:
+    - ${formatNumber(numero, 0, 'pt-br')}
+
+
+# dadosGerais(foto, pais, casos, ativos, recuperados, mortos, cDiarios, mDiarias)
+- ```
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "speak": "",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "size": "Medium",
+                            "url": "${if(foto, foto, dialog.pais.content.countryInfo.flag)}"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "**${if(pais, pais, "Mundo")}**",
+                            "horizontalAlignment": "Center",
+                            "spacing": "None",
+                            "size": "Large",
+                            "color": "Dark",
+                            "wrap": true,
+                            "fontType": "Monospace",
+                            "weight": "Bolder",
+                            "height": "stretch",
+                            "isSubtle": false
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "backgroundImage": {}
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "separator": true,
+            "spacing": "Padding",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "**Total de casos**",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "height": "stretch",
+                            "separator": true,
+                            "size": "Medium",
+                            "color": "Accent",
+                            "isSubtle": true,
+                            "spacing": "Small"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "**Ativos**",
+                            "spacing": "Small",
+                            "wrap": true,
+                            "size": "Medium",
+                            "weight": "Bolder",
+                            "color": "Accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "**Recuperados**",
+                            "spacing": "Small",
+                            "wrap": true,
+                            "color": "Accent",
+                            "weight": "Bolder",
+                            "size": "Medium"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "**Mortos**",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "color": "Accent",
+                            "size": "Medium",
+                            "spacing": "Small"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "***${formatNumber(casos, 0, 'pt-br')}***",
+                            "horizontalAlignment": "Right",
+                            "spacing": "Small",
+                            "wrap": true,
+                            "height": "stretch",
+                            "size": "Medium",
+                            "color": "Attention",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "***${formatNumber(ativos, 0, 'pt-br')}***",
+                            "horizontalAlignment": "Right",
+                            "spacing": "Small",
+                            "wrap": true,
+                            "color": "Attention",
+                            "size": "Medium",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "***${formatNumber(recuperados, 0, 'pt-br')}***",
+                            "horizontalAlignment": "Right",
+                            "spacing": "Small",
+                            "wrap": true,
+                            "color": "Attention",
+                            "size": "Medium",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "***${formatNumber(mortos, 0, 'pt-br')}***",
+                            "wrap": true,
+                            "spacing": "Small",
+                            "horizontalAlignment": "Right",
+                            "weight": "Bolder",
+                            "color": "Attention",
+                            "size": "Medium"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "spacing": "Small",
+            "separator": true,
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 1,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "**Diários**",
+                            "isSubtle": false,
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder",
+                            "wrap": true,
+                            "spacing": "Small",
+                            "size": "Medium",
+                            "color": "Dark"
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "**Casos**",
+                                            "wrap": true,
+                                            "weight": "Bolder",
+                                            "color": "Accent",
+                                            "size": "Medium",
+                                            "spacing": "Small"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "**Mortos**",
+                                            "wrap": true,
+                                            "color": "Accent",
+                                            "weight": "Bolder",
+                                            "size": "Medium",
+                                            "spacing": "Small"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "***${if(cDiarios > 0, '▲', '')}${ValidaDados(cDiarios)}***",
+                                            "wrap": true,
+                                            "color": "Attention",
+                                            "weight": "Bolder",
+                                            "horizontalAlignment": "Right",
+                                            "size": "Medium",
+                                            "spacing": "Small"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "***${if(mDiarias > 0, '▲', '')}${ValidaDados(mDiarias)}***",
+                                            "wrap": true,
+                                            "color": "Attention",
+                                            "weight": "Bolder",
+                                            "size": "Medium",
+                                            "fontType": "Default",
+                                            "horizontalAlignment": "Right",
+                                            "height": "stretch",
+                                            "spacing": "Small"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "spacing": "Small"
+                        }
+                    ],
+                    "spacing": "Small",
+                    "separator": true,
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "ColumnSet",
+            "separator": true,
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 1,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "**Fonte:** *worldometers.info*",
+                            "wrap": true,
+                            "spacing": "Small",
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "backgroundImage": {
+        "url": "https://i.imgur.com/lSchv1p.jpg",
+        "horizontalAlignment": "Center",
+        "verticalAlignment": "Center"
+    }
+}
+ ```

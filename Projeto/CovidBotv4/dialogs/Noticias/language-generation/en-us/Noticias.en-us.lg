@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# SendActivity_gEoF1w()
+-${AdaptiveCard()}
+
+
+# SendActivity_pfRDuG()
+- 0 - Menu Inicial
+# SendActivity_gecClH()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_wtfXEn()
+[Activity
+    Type = typing
+]
+
+# AdaptiveCard
+[Activity
+    Attachments = ${json(noticias())}
+]

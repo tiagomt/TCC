@@ -1,0 +1,13 @@
+[import](common.lg)
+
+# SendActivity_DCUM87()
+- ```Escolha uma das opções abaixo:
+
+1 - Números atualizados
+2 - Notícias
+3 - Fake News
+4 - Sintomas
+5 - Como se prevenir
+6 - Orientações para viagens
+7 - Perguntas e respostas
+```

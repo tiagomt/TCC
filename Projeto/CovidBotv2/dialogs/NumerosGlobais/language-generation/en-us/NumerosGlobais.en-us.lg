@@ -1,0 +1,22 @@
+[import](common.lg)
+
+# SendActivity_ifGLlU()
+- ```**Total de casos:** ${formatNumber(
+dialog.resposta.content.cases, 0, 'pt-br')}
+**Ativos:** ${formatNumber(dialog.resposta.content.active, 0, 'pt-br')}
+**Recuperados:** ${formatNumber(
+dialog.resposta.content.recovered, 0, 'pt-br')}
+**Mortos:**  ${formatNumber(dialog.resposta.content.deaths, 0, 'pt-br')}
+**Casos diários:**  ${ValidaDados(dialog.resposta.content.todayCases)}
+**Mortes diárias:** ${ValidaDados(dialog.resposta.content.todayDeaths)}
+```
+
+# SendActivity_I6bUVR()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+# SendActivity_LKvD2H()
+[Activity
+    Type = typing
+]
