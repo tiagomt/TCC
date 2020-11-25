@@ -1,0 +1,45 @@
+
+> LUIS application information
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 3.2.0
+
+
+> # Intent definitions
+
+# ChoiceInput_Response_VRCmMZ
+- Menu
+- Quero fazer uma nova pergunta
+- Nova
+- Principal
+- Voltar
+
+
+> # Entity definitions
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+@ list Choice = 
+	- 0 - Menu Inicial :
+		- 0
+		- Menu
+		- Principal
+		- Menu Principal
+		- Inicial
+	- 1 - Nova pergunta :
+		- 1
+		- nova
+		- nova pergunta
+		- pergunta
+
+
+> # RegEx entities
+
+

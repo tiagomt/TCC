@@ -1,0 +1,479 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "YrkXAw",
+    "name": "PerguntasERespostas",
+    "description": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "kTblfX"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "P4B9qW"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${NumberInput_Prompt_P4B9qW()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.pergunta"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "TNgvkF"
+          },
+          "condition": "dialog.pergunta",
+          "cases": [
+            {
+              "value": "1",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "fZbiwq"
+                  },
+                  "activity": "${SendActivity_fZbiwq()}"
+                }
+              ]
+            },
+            {
+              "value": "2",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "mBaONf"
+                  },
+                  "activity": "${SendActivity_mBaONf()}"
+                }
+              ]
+            },
+            {
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "qkQIcy"
+                  },
+                  "activity": "${SendActivity_qkQIcy()}"
+                }
+              ],
+              "value": "3"
+            },
+            {
+              "value": "4",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "z8x9IH"
+                  },
+                  "activity": "${SendActivity_z8x9IH()}"
+                }
+              ]
+            },
+            {
+              "value": "5",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "k8ln4o"
+                  },
+                  "activity": "${SendActivity_k8ln4o()}"
+                }
+              ]
+            },
+            {
+              "value": "6",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "bTiijs"
+                  },
+                  "activity": "${SendActivity_bTiijs()}"
+                }
+              ]
+            },
+            {
+              "value": "7",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "HFGT8s"
+                  },
+                  "activity": "${SendActivity_HFGT8s()}"
+                }
+              ]
+            },
+            {
+              "value": "8",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "F2HLmH"
+                  },
+                  "activity": "${SendActivity_F2HLmH()}"
+                }
+              ]
+            },
+            {
+              "value": "9",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "7i2ACj"
+                  },
+                  "activity": "${SendActivity_7i2ACj()}"
+                }
+              ]
+            },
+            {
+              "value": "10",
+              "actions": [
+                {
+                  "$kind": "Microsoft.NumberInput",
+                  "$designer": {
+                    "id": "5APiVc"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": true,
+                  "allowInterruptions": false,
+                  "prompt": "${NumberInput_Prompt_5APiVc()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "dialog.pergunta"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "rT0wPO"
+                  },
+                  "condition": "dialog.pergunta",
+                  "cases": [
+                    {
+                      "value": "11",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "JwapDn"
+                          },
+                          "activity": "${SendActivity_JwapDn()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "12",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "kkIFEQ"
+                          },
+                          "activity": "${SendActivity_kkIFEQ()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "13",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "kQiPnP"
+                          },
+                          "activity": "${SendActivity_kQiPnP()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "14",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "fXgEQf"
+                          },
+                          "activity": "${SendActivity_fXgEQf()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "15",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "VqEsRD"
+                          },
+                          "activity": "${SendActivity_VqEsRD()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "16",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "SrmEUw"
+                          },
+                          "activity": "${SendActivity_SrmEUw()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "17",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "8b5Rdp"
+                          },
+                          "activity": "${SendActivity_8b5Rdp()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "18",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "gmzz6A"
+                          },
+                          "activity": "${SendActivity_gmzz6A()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "19",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "sLMShG"
+                          },
+                          "activity": "${SendActivity_sLMShG()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "20",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "6vHpG3"
+                          },
+                          "activity": "${SendActivity_6vHpG3()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "21",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.RepeatDialog",
+                          "$designer": {
+                            "id": "8VyCVf"
+                          },
+                          "activityProcessed": true
+                        }
+                      ]
+                    },
+                    {
+                      "value": "0",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "l9DuJi"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "MenuInicial"
+                        },
+                        {
+                          "$kind": "Microsoft.EndDialog",
+                          "$designer": {
+                            "id": "IJcsIx"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "default": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "NHngEY"
+                      },
+                      "activity": "${SendActivity_NHngEY()}"
+                    },
+                    {
+                      "$kind": "Microsoft.RepeatDialog",
+                      "$designer": {
+                        "id": "Fx21Yr"
+                      },
+                      "activityProcessed": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "0",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "zKHKXW"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "MenuInicial"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "L8Ov6J"
+                  }
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "cNQpN2"
+              },
+              "activity": "${SendActivity_cNQpN2()}"
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "GO0sXB"
+              },
+              "activityProcessed": true
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "VRCmMZ"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
+          "allowInterruptions": true,
+          "prompt": "${ChoiceInput_Prompt_VRCmMZ()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "style": "heroCard",
+          "choices": [
+            {
+              "value": "0 - Menu Inicial"
+            }
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        {
+          "$kind": "Microsoft.ReplaceDialog",
+          "$designer": {
+            "id": "43v4Xc"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "tXwQ3f",
+        "name": "MenuInicialTrigger"
+      },
+      "intent": "MenuInicialTrigger",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "NRnNcD"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuInicial"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "pFhBLX",
+        "name": "OutrasPerguntas"
+      },
+      "intent": "OutrasPerguntas",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "nZWeIp"
+          },
+          "activity": "${SendActivity_nZWeIp()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "heqIm5"
+          },
+          "activity": "${SendActivity_heqIm5()}"
+        }
+      ]
+    }
+  ],
+  "generator": "PerguntasERespostas.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "MenuInicialTrigger",
+        "pattern": "0|Menu Inicial"
+      },
+      {
+        "intent": "OutrasPerguntas",
+        "pattern": "10|Outras perguntas|Outras"
+      }
+    ]
+  },
+  "id": "PerguntasERespostas"
+}

@@ -1,5 +1,18 @@
 [import](common.lg)
 
 
-# SendActivity_yZJxt5()
-- ${AdaptiveCard()}
+# SendActivity_nbn65x()
+-${AdaptiveCard("**Digite o número da pergunta:**
+
+**1 - O que são os coronavírus e a COVID-19 e como eles estão relacionados com a SARS?**
+**2 - Como a COVID-19 é disseminada?**
+**3 - Quando a pandemia da COVID-19 vai acabar?**
+**4 - Posso contrair COVID-19 por superfícies infectadas ou pacotes vindos de áreas infectadas?**
+**5 - O que posso fazer para me proteger e evitar a disseminação da doença?**
+**6 - O que devo fazer se tiver visitado uma área em que a COVID-19 está se disseminando?**
+**7 - Quais são as opções de tratamento para a COVID-19 (incluindo medicamentos, vacinas e terapias)?**
+**8 - Devo usar uma máscara para me proteger?**
+**9 - O que não devo fazer?**
+**10 - Outras perguntas**
+
+**0 - Menu Inicial**")}

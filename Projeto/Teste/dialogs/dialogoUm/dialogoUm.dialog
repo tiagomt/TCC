@@ -19,14 +19,17 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "yZJxt5"
+            "id": "nbn65x"
           },
-          "activity": "${SendActivity_yZJxt5()}"
+          "activity": "${SendActivity_nbn65x()}"
         }
       ]
     }
   ],
   "generator": "dialogoUm.lg",
-  "recognizer": "dialogoUm.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
   "id": "dialogoUm"
 }
