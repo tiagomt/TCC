@@ -1,0 +1,47 @@
+[import](common.lg)
+
+# SendActivity_G3zbl0()
+- ${AdaptiveCard2("***Os viajantes doentes devem adiar suas viagens ou evitar viajar para as áreas afetadas, especialmente idosos e pessoas com doenças crônicas ou outros problemas de saúde.*** ***“Áreas afetadas” são países, províncias, territórios ou cidades onde há transmissão comunitária da COVID-19, em comparação a áreas com apenas casos vindos do exterior.***
+ 
+***As recomendações gerais para viajantes incluem:***")}
+# SendActivity_tN3xLy()
+- ${AdaptiveCard(dialog.foreach.value, dialog.fotos[dialog.foreach.index])}
+# SendActivity_ngZAFY()
+[Activity
+    Type = typing
+]
+
+
+# SendActivity_9yOz7T()
+[Activity
+    Value = ${4000}
+    Type = ${"delay"}
+]
+
+
+# AdaptiveCard(texto, imagem)
+[Activity
+    Attachments = ${json(OrientacoesViagens(texto, imagem))}
+]
+
+# AdaptiveCard2(texto)
+[Activity
+    Attachments = ${json(Sintomas2(texto))}
+]
+# SendActivity_FcT7Hd()
+[Activity
+    Type = typing
+]
+
+
+# SendActivity_o7nBjc()
+[Activity
+    Value = ${6000}
+    Type = ${"delay"}
+]
+
+
+
+
+# ChoiceInput_Prompt_Qq6X00()
+-  

@@ -1,0 +1,10 @@
+{
+  "NumerosPais.en-us": {
+    "rootDialog": false,
+    "triggers": {}
+  },
+  "PerguntasERespostas.en-us": {
+    "rootDialog": false,
+    "triggers": {}
+  }
+}

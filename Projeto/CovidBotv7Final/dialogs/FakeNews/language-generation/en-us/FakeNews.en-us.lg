@@ -1,0 +1,22 @@
+[import](common.lg)
+
+# SendActivity_U8wYhC()
+-${AdaptiveCard("**Verificação de fatos da OMS**\n\nExistem muitas informações **falsas** circulando. Estes são os **fatos**: ", "https://i.imgur.com/zH5tyZc.png")}
+# SendActivity_s1gXAx()
+-${AdaptiveCard(dialog.foreach.value, dialog.fotos[dialog.foreach.index])}
+# SendActivity_GlyauM()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+# SendActivity_jkrXQX()
+[Activity
+    Type = typing
+]
+
+# AdaptiveCard(texto, foto)
+[Activity
+    Attachments = ${json(FakeNews(texto, foto))}
+]
+# ChoiceInput_Prompt_vS8aYE()
+- 
