@@ -1,6 +1,6 @@
 #Covid bot
 
-Bot que retorna dados, sintomas e outras informações extraidas da OMS para os usuários do bot.
+Bot que retorna dados, sintomas e outras informações sobre a COVID-19 extraidas da OMS para os usuários do bot.
 
 Bot criado com o Bot Framework Composer. 
 A documentação completa do Bot Framework Composer segue abaixo:
