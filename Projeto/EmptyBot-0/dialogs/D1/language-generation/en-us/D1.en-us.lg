@@ -1,6 +1,0 @@
-[import](common.lg)
-
-# TextInput_Prompt_nBOf5J()
-- Digite o que tu quer
-# SendActivity_AlIhbB()
-- Certo, você quer ${dialog.desejo}

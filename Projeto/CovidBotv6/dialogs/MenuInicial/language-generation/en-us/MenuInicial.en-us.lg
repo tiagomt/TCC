@@ -1,9 +1,0 @@
-[import](common.lg)
-
-# ChoiceInput_Prompt_g290g0()
--**Escolha uma das opções abaixo:**
-
-
-# SendActivity_iH6RSR()
-- **${WelcomeUser()}**
-
